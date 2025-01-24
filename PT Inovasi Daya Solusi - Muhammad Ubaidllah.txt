@@ -1,0 +1,31 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    int iSatu = 0;
+	    int iDua = 0;
+	    int iTiga = 0;
+	    int iEmpat = 0;
+	    int iLima = 0;
+	    
+	    for (iSatu = 0; iSatu < 10; iSatu++) {
+			if ((iSatu % 4) == 0) {
+			    iDua = iDua + iSatu + iTiga - iLima;
+			}
+			if ((iSatu % 3) == 0) {
+			    iTiga = iTiga + ( iSatu + iDua ) - iEmpat;
+			}
+			if ((iSatu % 2) == 0) {
+			     iEmpat = iEmpat + ( iSatu + iDua ) - iTiga;
+			}
+			if ((iSatu % 1) == 0) {
+			     iLima = iSatu + iDua + iTiga;
+			}
+		}
+	    
+		System.out.println("iSatu : " + iSatu);
+		System.out.println("iDua : " + iDua);
+		System.out.println("iTiga : " + iTiga);
+		System.out.println("iEmpat : " + iEmpat);
+		System.out.println("iLima : " + iLima);
+	}
+}
